@@ -83,7 +83,7 @@ require (
 	github.com/talos-systems/talos/pkg/machinery v0.0.0-00010101000000-000000000000
 	github.com/u-root/u-root v7.0.0+incompatible
 	github.com/vishvananda/netlink v1.1.1-0.20210330154013-f5de75959ad5
-	github.com/vmware-tanzu/sonobuoy v0.54.0
+	github.com/vmware-tanzu/sonobuoy v0.56.12
 	github.com/vmware/govmomi v0.27.1
 	github.com/vmware/vmw-guestinfo v0.0.0-20211006225857-cc1fd90d572c
 	github.com/vultr/metadata v1.0.3
@@ -92,9 +92,9 @@ require (
 	go.etcd.io/etcd/client/v3 v3.5.1
 	go.etcd.io/etcd/etcdutl/v3 v3.5.1
 	go.uber.org/zap v1.19.1
-	golang.org/x/net v0.0.0-20211029224645-99673261e6eb
-	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/sys v0.0.0-20211031064116-611d5d643895
+	golang.org/x/net v0.0.0-20220906165146-f3363e06e74c
+	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4
+	golang.org/x/sys v0.0.0-20220728004956-3c1f35247d10
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211
 	golang.org/x/time v0.0.0-20210723032227-1f47c861a9ac
 	golang.zx2c4.com/wireguard/wgctrl v0.0.0-20211027115401-c9b1ec1aa6d8
@@ -137,7 +137,6 @@ require (
 	github.com/bits-and-blooms/bitset v1.2.0 // indirect
 	github.com/blang/semver v3.5.1+incompatible // indirect
 	github.com/briandowns/spinner v1.6.1 // indirect
-	github.com/c2h5oh/datasize v0.0.0-20171227191756-4eba002a5eae // indirect
 	github.com/cenkalti/backoff/v4 v4.1.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.1 // indirect
 	github.com/chai2010/gettext-go v0.0.0-20160711120539-c6fed771bfd5 // indirect
@@ -263,13 +262,12 @@ require (
 	go.uber.org/multierr v1.7.0 // indirect
 	go4.org/intern v0.0.0-20211027215823-ae77deb06f29 // indirect
 	go4.org/unsafe/assume-no-moving-gc v0.0.0-20211027215541-db492cf91b37 // indirect
-	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
+	golang.org/x/crypto v0.0.0-20220411220226-7b82a4e95df4 // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
-	golang.org/x/mod v0.5.1 // indirect
+	golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4 // indirect
 	golang.org/x/oauth2 v0.0.0-20210819190943-2bc19b11175f // indirect
-	golang.org/x/text v0.3.6 // indirect
-	golang.org/x/tools v0.1.7 // indirect
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
+	golang.org/x/text v0.3.8 // indirect
+	golang.org/x/tools v0.1.12 // indirect
 	golang.zx2c4.com/wireguard v0.0.0-20210927201915-bb745b2ea326 // indirect
 	google.golang.org/api v0.44.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
