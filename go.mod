@@ -41,7 +41,7 @@ require (
 	github.com/coreos/go-iptables v0.6.0
 	github.com/coreos/go-semver v0.3.1
 	github.com/cosi-project/runtime v0.3.0-alpha.8
-	github.com/docker/distribution v2.8.1+incompatible
+	github.com/docker/distribution v2.8.2+incompatible
 	github.com/docker/docker v23.0.1+incompatible
 	github.com/docker/go-connections v0.4.0
 	github.com/dustin/go-humanize v1.0.1
