@@ -13,7 +13,7 @@ require (
 	github.com/santhosh-tekuri/jsonschema/v5 v5.3.1
 	github.com/siderolabs/gen v0.8.5
 	github.com/wk8/go-ordered-map/v2 v2.1.8
-	gopkg.in/yaml.v3 v3.0.1
+	go.yaml.in/yaml/v4 v4.0.0-rc.6
 	mvdan.cc/gofumpt v0.9.2
 )
 
@@ -26,4 +26,5 @@ require (
 	github.com/mailru/easyjson v0.7.7 // indirect
 	golang.org/x/net v0.46.0 // indirect
 	golang.org/x/tools v0.38.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
