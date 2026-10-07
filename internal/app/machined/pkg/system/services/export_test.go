@@ -57,3 +57,6 @@ func (svc *Extension) ApplyExtensionServiceConfig(
 
 // AuthorizationRules exposes production authorization rules for external tests.
 var AuthorizationRules = rules
+
+// KubeletCPUArguments exposes the same-read process options for tests.
+var KubeletCPUArguments = kubeletCPUArguments

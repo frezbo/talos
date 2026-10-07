@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strconv"
 	"sync"
 	"time"
 
@@ -143,9 +144,10 @@ func (k *Kubelet) Runner(r runtime.Runtime) (runner.Runner, error) {
 	spec := specResource.TypedSpec()
 
 	// Set the process arguments.
+	processArgs, binding := kubeletCPUArguments(specResource)
 	args := runner.Args{
 		ID:          k.ID(r),
-		ProcessArgs: append([]string{"/usr/local/bin/kubelet"}, spec.Args...),
+		ProcessArgs: processArgs,
 	}
 
 	// Set the required kubelet mounts.
@@ -203,6 +205,7 @@ func (k *Kubelet) Runner(r runtime.Runtime) (runner.Runner, error) {
 				oci.WithMounts(mounts),
 				oci.WithHostNamespace(specs.NetworkNamespace),
 				oci.WithHostNamespace(specs.PIDNamespace),
+				binding,
 				oci.WithParentCgroupDevices,
 				oci.WithMaskedPaths(nil),
 				oci.WithReadonlyPaths(nil),
@@ -217,6 +220,14 @@ func (k *Kubelet) Runner(r runtime.Runtime) (runner.Runner, error) {
 		),
 		restart.WithType(restart.Forever),
 	), nil
+}
+
+func kubeletCPUArguments(spec *k8s.KubeletSpec) ([]string, oci.SpecOpts) {
+	return append([]string{"/usr/local/bin/kubelet"}, spec.TypedSpec().Args...),
+		oci.WithAnnotations(map[string]string{
+			k8s.KubeletSpecTokenAnnotation:  k8s.KubeletSpecToken(spec),
+			k8s.KubeletCPUManagedAnnotation: strconv.FormatBool(k8s.KubeletCPUManaged(spec)),
+		})
 }
 
 // HealthFunc implements the HealthcheckedService interface.
