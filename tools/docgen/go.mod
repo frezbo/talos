@@ -1,6 +1,6 @@
 module github.com/siderolabs/talos/tools/docgen
 
-go 1.25.0
+go 1.26.0
 
 // forked go-yaml that introduces RawYAML interface, which can be used to populate YAML fields using bytes
 // which are then encoded as a valid YAML blocks with proper indentiation
@@ -11,9 +11,9 @@ require (
 	github.com/invopop/jsonschema v0.13.0
 	github.com/microcosm-cc/bluemonday v1.0.27
 	github.com/santhosh-tekuri/jsonschema/v5 v5.3.1
-	github.com/siderolabs/gen v0.8.5
+	github.com/siderolabs/gen v0.8.6
 	github.com/wk8/go-ordered-map/v2 v2.1.8
-	gopkg.in/yaml.v3 v3.0.1
+	go.yaml.in/yaml/v4 v4.0.0
 	mvdan.cc/gofumpt v0.9.2
 )
 
@@ -21,9 +21,13 @@ require (
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/bahlo/generic-list-go v0.2.0 // indirect
 	github.com/buger/jsonparser v1.1.1 // indirect
+	github.com/go-quicktest/qt v1.101.1-0.20240301121107-c6c8733fa1e6 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/gorilla/css v1.0.1 // indirect
-	github.com/mailru/easyjson v0.7.7 // indirect
+	github.com/mailru/easyjson v0.9.0 // indirect
+	github.com/stretchr/testify v1.12.1 // indirect
 	golang.org/x/net v0.46.0 // indirect
 	golang.org/x/tools v0.38.0 // indirect
+	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
